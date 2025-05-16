@@ -14,11 +14,11 @@ def rps():
         if user_input not in ["rock", "paper", "scissors"]:
             print("Invalid input! Please choose Rock, Paper, or Scissors.")
         elif (user_input == "rock" and comp == "scissors" ) or (user_input == "scissors" and comp == "paper") or (user_input == "paper" and comp == "rock"):
-            return "Congratulations, You Won!"
+            return f"{user_input.upper()} BEATS {comp.upper()} \nWell, Congratulations, You Won!"
         elif user_input == comp:
-            return "AAHHHH, This game is a draw! PLAY AGAIN"
+            return "This game is a draw! PLAY AGAIN"
         else:
-            return "HAHAHAHA, Better luck next time!"
+            return f"HAHAHAHA, {comp.upper()} BEATS {user_input.upper()} \nBetter luck next time!"
         
     print(game(user_input, comp))
     
